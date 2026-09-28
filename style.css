@@ -1,4 +1,4 @@
-/* Variáveis Globais de Cores com Contraste WCAG 2.1 Validado */
+
 :root {
     --primary: #004d40;       
     --primary-hover: #00332c;
@@ -11,7 +11,6 @@
     --transition: all 0.25s ease-in-out;
 }
 
-/* Reset Global e Foco Visível para Acessibilidade por Teclado */
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +44,7 @@ body {
     flex-direction: column;
 }
 
-/* Header & Navegação */
+
 header {
     background: var(--white);
     border-bottom: 2px solid #e2e8f0;
@@ -81,7 +80,7 @@ nav ul {
     background: #edf2f7;
     padding: 0.75rem 1.5rem;
     gap: 1rem;
-    flex-wrap: wrap; /* Permite que os itens passem para baixo se faltar espaço */
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -99,16 +98,16 @@ nav a:hover, nav a[aria-current="page"] {
     background: var(--primary);
 }
 
-/* Conteúdo Principal */
+
 main {
     padding: 1.5rem;
     flex: 1;
 }
 
-/* Banner da Página Inicial */
+
 .banner-box {
     width: 100%;
-    max-height: 350px;
+    height: 280px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -119,11 +118,12 @@ main {
 .banner-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    background: #ffffff;
 }
 
-/* Mensagem Motivacional */
+
 .hero-message {
     text-align: center;
     max-width: 800px;
@@ -193,7 +193,7 @@ main {
     color: var(--primary);
 }
 
-/* Badges */
+
 .badge {
     padding: 0.2rem 0.5rem;
     border-radius: 12px;
@@ -217,7 +217,6 @@ main {
     color: #ffffff;
 }
 
-/* Formulários Acessíveis */
 fieldset {
     border: 2px solid #cbd5e0;
     border-radius: 8px;
@@ -273,7 +272,7 @@ legend {
     background: var(--primary-hover);
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 1.2rem;
@@ -283,7 +282,7 @@ footer {
     border-top: 1px solid #cbd5e0;
 }
 
-/* Responsividade Aprimorada para Telemóveis */
+
 @media (max-width: 768px) {
     body {
         padding: 0;
