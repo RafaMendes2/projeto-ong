@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Esperança | Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <div class="header-top">
+                <h1>ONG Esperança</h1>
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            </div>
+            <nav aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Página Inicial</a></li>
+                    <li><a href="projetos.html">Iniciativas Solidárias</a></li>
+                    <li><a href="cadastro.html">Engajamento (Cadastro)</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            
+            <div class="banner-box">
+                <img src="img/criancas-felizes-wallpaper.jpg" alt="Mãos de crianças pintadas com cores vibrantes simbolizando esperança, união e apoio comunitário">
+            </div>
+
+        
+            <section class="hero-message">
+                <h2>Pequenos gestos criam sorrisos que transformam o mundo!</h2>
+                <p>Cada cor, cada mão estendida e cada ato de carinho tem o poder de iluminar o futuro de quem mais precisa. Junte-se à nossa causa, faça parte desta corrente do bem e descubra a alegria de fazer a diferença na vida de centenas de crianças e famílias.</p>
+                <a href="cadastro.html" class="btn-cta">Quero ser um Voluntário</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

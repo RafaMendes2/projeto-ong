@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Esperança | Iniciativas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <div class="header-top">
+                <h1>ONG Esperança</h1>
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            </div>
+            <nav aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="projetos.html" aria-current="page">Iniciativas Solidárias</a></li>
+                    <li><a href="cadastro.html">Engajamento (Cadastro)</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Nossas Iniciativas Solidárias</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Conheça os projetos ativos que transformam realidades diariamente.</p>
+
+            <section class="projetos-list" aria-label="Lista de Projetos">
+                <article class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto Prato Cheio</h3>
+                        <span class="badge badge-prioridade" aria-label="Prioridade alta">Prioridade</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Distribuição de cestas básicas e refeições diárias, visando combater a insegurança alimentar em regiões de alta vulnerabilidade social.</p>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto Mente Aberta</h3>
+                        <span class="badge badge-educacao">Educação</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Aulas de alfabetização e reforço escolar no contraturno para crianças e adolescentes, criando oportunidades através da educação.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
