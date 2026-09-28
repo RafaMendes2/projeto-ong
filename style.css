@@ -1,16 +1,17 @@
-
+/* Variáveis Globais de Cores com Contraste WCAG 2.1 Validado */
 :root {
-    --primary: #004d40;
+    --primary: #004d40;       
     --primary-hover: #00332c;
-    --secondary: #b71c1c;
+    --secondary: #b71c1c;     
     --bg-color: #f8f9fa;
-    --text-main: #1a1a1a;
-    --text-muted: #4a5568;
+    --text-main: #1a1a1a;     
+    --text-muted: #4a5568;    
     --white: #ffffff;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --transition: all 0.25s ease-in-out;
 }
 
+/* Reset Global e Foco Visível para Acessibilidade por Teclado */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +31,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
 }
 
 .main-container {
@@ -44,6 +45,7 @@ body {
     flex-direction: column;
 }
 
+/* Header & Navegação */
 header {
     background: var(--white);
     border-bottom: 2px solid #e2e8f0;
@@ -53,11 +55,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.2rem 1.5rem;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--primary);
     font-weight: 700;
 }
@@ -66,7 +68,7 @@ header h1 {
     display: none;
     background: none;
     border: 2px solid var(--primary);
-    padding: 0.5rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 6px;
     font-size: 1.2rem;
     cursor: pointer;
@@ -77,16 +79,17 @@ nav ul {
     display: flex;
     list-style: none;
     background: #edf2f7;
-    padding: 0.75rem 2rem;
-    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que os itens passem para baixo se faltar espaço */
 }
 
 nav a {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 600;
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 6px;
     transition: var(--transition);
 }
@@ -96,18 +99,20 @@ nav a:hover, nav a[aria-current="page"] {
     background: var(--primary);
 }
 
+/* Conteúdo Principal */
 main {
-    padding: 2.5rem 2rem;
+    padding: 1.5rem;
     flex: 1;
 }
 
+/* Banner da Página Inicial */
 .banner-box {
     width: 100%;
-    max-height: 400px;
+    max-height: 350px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     background: #cbd5e0;
 }
 
@@ -118,26 +123,26 @@ main {
     display: block;
 }
 
-
+/* Mensagem Motivacional */
 .hero-message {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
     background: #f0fdf4;
-    padding: 2.5rem 2rem;
+    padding: 2rem 1.2rem;
     border-radius: 12px;
     border-left: 6px solid var(--primary);
     border: 1px solid #bbf7d0;
 }
 
 .hero-message h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--primary);
     margin-bottom: 1rem;
 }
 
 .hero-message p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-muted);
     margin-bottom: 1.5rem;
 }
@@ -146,7 +151,7 @@ main {
     display: inline-block;
     background: var(--secondary);
     color: var(--white);
-    padding: 0.8rem 2rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -159,19 +164,19 @@ main {
     transform: translateY(-2px);
 }
 
-
+/* Listas e Cartões de Projetos */
 .projetos-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.2rem;
 }
 
 .projeto-card {
     background: var(--white);
     border: 1px solid #cbd5e0;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
@@ -184,14 +189,15 @@ main {
 }
 
 .projeto-card h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--primary);
 }
 
+/* Badges */
 .badge {
-    padding: 0.25rem 0.6rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 12px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -211,34 +217,35 @@ main {
     color: #ffffff;
 }
 
-
+/* Formulários Acessíveis */
 fieldset {
     border: 2px solid #cbd5e0;
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
     background: #f8fafc;
 }
 
 legend {
     font-weight: bold;
     color: var(--primary);
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
 }
 
 .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .form-group input, .form-group select {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.7rem;
     border: 2px solid #a0aec0;
     border-radius: 6px;
     font-size: 1rem;
@@ -254,7 +261,7 @@ legend {
     color: var(--white);
     border: none;
     width: 100%;
-    padding: 0.9rem;
+    padding: 0.85rem;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
@@ -266,11 +273,42 @@ legend {
     background: var(--primary-hover);
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.2rem;
     background: #edf2f7;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border-top: 1px solid #cbd5e0;
+}
+
+/* Responsividade Aprimorada para Telemóveis */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    .main-container {
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0.8rem 1.5rem;
+        gap: 0.5rem;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav a {
+        display: block;
+        padding: 0.6rem;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+    }
 }
